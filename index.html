@@ -1,58 +1,358 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de senhas</title>
+    <title>Assistente de Cozinha</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <section class="conteudo">
-        <div class="conteudo-titulo">
-            <img src="" alt="cadeado fechado">
-        <h2 class="titulo-principal">Gerador de Senhas</h2>
-        <h3 class="titulo-secundario">Gere Instantaneamente uma Senha aleatoria e segura</h3>
-        </div>
-        <div class="conteudo-senha">
-            <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha">
-        </div>
-        <div class="parametro">
-            <h3 class="parametro-titulo">Personalize a sua senha</h3>
-            <div class="parametro-coluna__senha">
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Numero de caracteres</h4>
-                    <div class="parametro-senha-botoes">
-                        <button class="parametro-senha__botao">-</button>
-                        <p class="parametro-senha__texto">12</p>
-                        <button class="parametro-senha__botao">+</button>
-                    </div>
-                </div>
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Caracteristicas da senha</h4>
-                    <div class="parametro-senha-checkbox">
-                        <input name="maiusculo" type="checkbox" checked>
-                        <label for="maiusculo">Letras maiusculas</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="minusculo" type="checkbox" checked>
-                        <label for="minusculo">Letras minusculas</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="numero" type="checkbox" checked>
-                        <label for="numero">Numeros</label>
-                    </div>
-                    <div class="parametro-senha-checkbox">
-                        <input name="simbolo" type="checkbox" checked>
-                        <label for="simbolo">Simbolos</label>
-                    </div>
-                </div>
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Força da senha</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+
+<section class="conteudo-principal">
+
+<h1 class="titulo-principal">
+🍳 Assistente de Cozinha <span>_</span>
+</h1>
+
+<div class="conteudo">
+
+<div class="botoes">
+
+<button class="botao ativo">🍝 Massa</button>
+
+<button class="botao">🥘 Molho</button>
+
+<button class="botao">🍗 Carne</button>
+
+<button class="botao">🥦 Legumes</button>
+
+</div>
+
+<div class="abas-textos">
+
+<div class="aba-conteudo ativo">
+
+<h2>Massa</h2>
+
+<h3>Tempo restante</h3>
+
+<div class="contador">
+
+<div class="contador-digito">
+<p id="min0" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">MIN</p>
+</div>
+
+<div class="contador-digito">
+<p id="seg0" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">SEG</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="aba-conteudo">
+
+<h2>Molho</h2>
+
+<h3>Tempo restante</h3>
+
+<div class="contador">
+
+<div class="contador-digito">
+<p id="min1" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">MIN</p>
+</div>
+
+<div class="contador-digito">
+<p id="seg1" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">SEG</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="aba-conteudo">
+
+<h2>Carne</h2>
+
+<h3>Tempo restante</h3>
+
+<div class="contador">
+
+<div class="contador-digito">
+<p id="min2" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">MIN</p>
+</div>
+
+<div class="contador-digito">
+<p id="seg2" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">SEG</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="aba-conteudo">
+
+<h2>Legumes</h2>
+
+<h3>Tempo restante</h3>
+
+<div class="contador">
+
+<div class="contador-digito">
+<p id="min3" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">MIN</p>
+</div>
+
+<div class="contador-digito">
+<p id="seg3" class="contador-digito-numero"></p>
+<p class="contador-digito-texto">SEG</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap&#39;);
+
+:root{
+
+--fundo:#202124;
+--verde:#34d058;
+--branco:#fff;
+--ativo:#ff7043;
+--inativo:#444;
+--caixa:#303134;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+background:var(--fundo);
+font-family:'Chakra Petch',sans-serif;
+color:white;
+
+}
+
+.conteudo-principal{
+
+max-width:1100px;
+margin:auto;
+padding:30px;
+
+}
+
+.titulo-principal{
+
+font-size:40px;
+margin-bottom:30px;
+
+}
+
+.titulo-principal span{
+
+color:var(--verde);
+
+}
+
+.botoes{
+
+display:flex;
+
+}
+
+.botao{
+
+flex:1;
+padding:20px;
+background:var(--inativo);
+border:none;
+color:white;
+cursor:pointer;
+font-size:18px;
+
+}
+
+.botao.ativo{
+
+background:var(--ativo);
+
+}
+
+.abas-textos{
+
+background:var(--caixa);
+padding:40px;
+border-radius:0 0 20px 20px;
+
+}
+
+.aba-conteudo{
+
+display:none;
+
+}
+
+.aba-conteudo.ativo{
+
+display:block;
+
+}
+
+h2{
+
+text-align:center;
+margin-bottom:10px;
+
+}
+
+h3{
+
+text-align:center;
+color:var(--verde);
+
+}
+
+.contador{
+
+display:flex;
+justify-content:center;
+margin-top:40px;
+
+}
+
+.contador-digito{
+
+margin:20px;
+text-align:center;
+
+}
+
+.contador-digito-numero{
+
+font-size:90px;
+
+}
+
+.contador-digito-texto{
+
+font-size:22px;
+color:var(--verde);
+
+}
+
+.finalizado{
+
+color:#ff3b30;
+
+animation:piscar .5s infinite;
+
+}
+
+@keyframes piscar{
+
+50%{
+
+opacity:.3;
+
+}
+
+}
+
+
+
+const botoes=document.querySelectorAll(".botao");
+const textos=document.querySelectorAll(".aba-conteudo");
+
+for(let i=0;i<botoes.length;i++){
+
+botoes[i].onclick=function(){
+
+for(let j=0;j<botoes.length;j++){
+
+botoes[j].classList.remove("ativo");
+textos[j].classList.remove("ativo");
+
+}
+
+botoes[i].classList.add("ativo");
+textos[i].classList.add("ativo");
+
+}
+
+}
+
+// tempos em minutos
+
+let tempos=[
+
+8*60,      // massa
+15*60,     // molho
+30*60,     // carne
+12*60      // legumes
+
+];
+
+function atualizar(){
+
+for(let i=0;i<tempos.length;i++){
+
+if(tempos[i]>0){
+
+tempos[i]--;
+
+}
+
+let minutos=Math.floor(tempos[i]/60);
+
+let segundos=tempos[i]%60;
+
+document.getElementById("min"+i).textContent=
+String(minutos).padStart(2,"0");
+
+document.getElementById("seg"+i).textContent=
+String(segundos).padStart(2,"0");
+
+if(tempos[i]==0){
+
+document.getElementById("min"+i).classList.add("finalizado");
+document.getElementById("seg"+i).classList.add("finalizado");
+
+}
+
+}
+
+}
+
+atualizar();
+
+setInterval(atualizar,1000);
